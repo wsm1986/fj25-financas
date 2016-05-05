@@ -15,7 +15,7 @@ public class TesteInserirConta {
 		try {
 			manager = factory.createEntityManager();
 
-			Conta conta = new Conta("Wellington", "1221", "58092-9", "237");
+			Conta conta = new Conta("Wellington", "11", "58092-9", "237");
 			manager.getTransaction().begin();
 			manager.persist(conta);
 			manager.getTransaction().commit();
