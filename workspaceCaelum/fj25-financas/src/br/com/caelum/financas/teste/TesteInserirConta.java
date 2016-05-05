@@ -2,6 +2,7 @@ package br.com.caelum.financas.teste;
 
 import javax.persistence.EntityManager;
 
+import br.com.caelum.financas.dao.ContaDao;
 import br.com.caelum.financas.modelo.Conta;
 import br.com.caelum.financas.util.JPAUtil;
 
@@ -12,10 +13,10 @@ public class TesteInserirConta {
 		EntityManager manager = null;
 		try {
 			manager = new  JPAUtil().geEntityManager();
-
+			ContaDao contaDao = new ContaDao(manager);
 			Conta conta = new Conta("Wellington", "11", "58092-9", "237");
 			manager.getTransaction().begin();
-			manager.persist(conta);
+			contaDao.adiciona(conta);
 			manager.getTransaction().commit();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
