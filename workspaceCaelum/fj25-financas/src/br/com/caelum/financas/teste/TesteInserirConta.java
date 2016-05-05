@@ -1,19 +1,17 @@
 package br.com.caelum.financas.teste;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 
 import br.com.caelum.financas.modelo.Conta;
+import br.com.caelum.financas.util.JPAUtil;
 
 public class TesteInserirConta {
 	public static void main(String[] args) {
 		long inicio = System.currentTimeMillis();
-		EntityManagerFactory factory = Persistence
-				.createEntityManagerFactory("controlefinancas");
+		
 		EntityManager manager = null;
 		try {
-			manager = factory.createEntityManager();
+			manager = new  JPAUtil().geEntityManager();
 
 			Conta conta = new Conta("Wellington", "11", "58092-9", "237");
 			manager.getTransaction().begin();
