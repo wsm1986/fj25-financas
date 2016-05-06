@@ -12,7 +12,7 @@ public class TesteInserirConta {
 		
 		EntityManager manager = null;
 		try {
-			manager = new  JPAUtil().geEntityManager();
+			manager = new  JPAUtil().getEntityManager();
 			ContaDao contaDao = new ContaDao(manager);
 			Conta conta = new Conta("Wellington", "11", "58092-9", "237");
 			manager.getTransaction().begin();
