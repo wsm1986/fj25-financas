@@ -7,13 +7,17 @@ import javax.persistence.EntityManager;
 import br.com.caelum.financas.modelo.Conta;
 
 public class ContaDao {
-	private EntityManager manager;
+	private EntityManager manager;  
 
 	public ContaDao(EntityManager manager) {
-		super();
 		this.manager = manager;
 	}
 	
+	public ContaDao() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public Conta busca(Integer id){
 		return manager.find(Conta.class, id);
 	}

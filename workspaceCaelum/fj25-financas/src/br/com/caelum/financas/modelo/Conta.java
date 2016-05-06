@@ -7,6 +7,11 @@ import javax.persistence.Id;
 @Entity
 public class Conta {
 
+	public Conta() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	@Id
 	@GeneratedValue
 	private Integer id;

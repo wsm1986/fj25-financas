@@ -14,7 +14,7 @@ public class TesteInserirConta {
 		try {
 			manager = new  JPAUtil().getEntityManager();
 			ContaDao contaDao = new ContaDao(manager);
-			Conta conta = new Conta("Wellington", "11", "58092-9", "237");
+			Conta conta = new Conta("Gabriel", "11", "58092-9", "237");
 			manager.getTransaction().begin();
 			contaDao.adiciona(conta);
 			manager.getTransaction().commit();
