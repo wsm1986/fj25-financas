@@ -15,7 +15,6 @@ public class ContaDao {
 	
 	public ContaDao() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public Conta busca(Integer id){
