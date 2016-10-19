@@ -12,7 +12,7 @@ public class TesteBuscaMovimentacao {
 		EntityManager manager = new JPAUtil().getEntityManager();
 		
 		MovimentacaoDao dao = new MovimentacaoDao(manager);
-		Movimentacao movimentacao = dao.busca(1);
+		Movimentacao movimentacao = dao.busca(6);
 		System.out.println(movimentacao.getConta().getTitulas());
 	}
 	
